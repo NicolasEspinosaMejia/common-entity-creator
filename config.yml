@@ -1,0 +1,16 @@
+pyms:
+    services:
+      swagger:
+          path: "swagger"
+          file: "swagger.yml"
+          url: "/swagger/"
+          project_dir: "project"
+
+    config:
+      APP_NAME: "common_entity_creator"
+      APP_VERSION: "1.0.0"
+      DEPLOYMENT_IDENTIFIER: "15"
+      APPLICATION_ROOT : "/common_entity_creator"
+      CONNECTIONS_STRINGS:
+        POSTGRESQL_DB_SET_AS: "postgresql,postgres:root@localhost/DEV_ACADEMIC_SYSTEM"
+      DEBUG: true

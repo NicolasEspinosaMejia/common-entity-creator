@@ -13,3 +13,13 @@ class AddressModel(Base):
     type_address = Column(Integer, ForeignKey('as_address_type'))
     identifier_student = Column(Integer)
     student = Column(JSON, nullable=False, unique=True)
+
+    def __init__(self,
+                 permanent_address,
+                 type_address,
+                 identifier_student,
+                 student):
+        self.permanent_address = permanent_address
+        self.type_address = type_address
+        self.identifier_student = identifier_student
+        self.student = student

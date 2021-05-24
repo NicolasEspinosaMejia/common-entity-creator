@@ -11,3 +11,11 @@ class CourseModel(Base):
     name_course = Column(String(), nullable=False, unique=True)
     course_start_date = Column(DateTime(), default=datetime.now())
     course_end_date = Column(DateTime(), nullable=False)
+
+    def __init__(self,
+                 name_course,
+                 course_start_date,
+                 course_end_date):
+        self.name_course = name_course
+        self.course_start_date = course_start_date
+        self.course_end_date = course_end_date
